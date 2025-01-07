@@ -1,0 +1,31 @@
+En kædet struktur er en datastruktur, hvor dataelementer (kaldet noder) forbindes gennem referencer (eller links).
+Hver node indeholder en eller flere datafelter og referencer til andre noder.
+Denne struktur gør det nemt at dynamisk allokere hukommelse og tilføje
+eller fjerne elementer uden behov for omarrangering af andre elementer, som det kan være nødvendigt med arrays.
+
+Der findes flere typer kædede strukturer, hvoraf de mest almindelige er:
+
+Enkeltkædede lister: Hver node peger kun på den næste node.
+Dobbeltkædede lister: Hver node har referencer til både den næste og den forrige node.
+Eksempler:
+En enkeltkædet liste kan bruges til at implementere en simpel kontaktliste.
+En dobbeltkædet liste er nyttig i applikationer, hvor man ofte skal navigere frem og tilbage, f.eks. en webbrowserhistorik.
+
+Hvad er forskellen mellem en enkeltkædet og dobbeltkædet liste?
+
+En enkeltkædet liste har noder, der kun peger på næste node.
+Det gør den enklere og sparer hukommelse, men gør baglæns traversal umulig.
+En dobbeltkædet liste har noder, der peger på både forrige og næste node,
+hvilket gør den mere fleksibel, men kræver mere hukommelse.
+Hvordan sikrer man korrekt inputvalidering?
+
+Inputvalidering sikrer, at data er i korrekt format, før de behandles. Eksempler:
+Telefonnummer skal være numerisk.
+E-mail skal indeholde "@" og en gyldig domænestruktur.
+Validering reducerer risikoen for runtime-fejl og øger programmets robusthed.
+Hvis det ikke implementeres, kan det føre til uforudsigelige fejl som NullPointerExceptions.
+
+
+
+
+

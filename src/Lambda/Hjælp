@@ -1,0 +1,52 @@
+Introduktion til Lambda-udtryk i Java
+Lambda-udtryk blev introduceret i Java 8 som en måde at skrive kortere og mere læsbar kode til operationer på data.
+I stedet for at oprette anonyme klasser kan du bruge lambda-udtryk til at repræsentere funktioner eller adfærd.
+Dette gør koden mere kompakt og funktionel.
+
+Hvad er Lambda-udtryk?
+Et lambda-udtryk er en kort måde at definere en metode på, som kan bruges direkte i koden.
+Lambda-udtryk bruges ofte sammen med funktionelle interfaces,
+som er interfaces med præcis én abstrakt metode (f.eks. Comparator eller Runnable).
+
+Eksempel:
+
+// Før lambda
+Comparator<String> comparator = new Comparator<String>() {
+    @Override
+    public int compare(String s1, String s2) {
+        return s1.compareTo(s2);
+    }
+};
+
+// Med lambda
+Comparator<String> comparator = (s1, s2) -> s1.compareTo(s2);
+
+
+Forklar, hvad et Lambda-udtryk er, og hvordan det kan bruges til at forenkle koden i Java.
+
+Et lambda-udtryk er en kompakt form for at definere en metode i Java.
+Det bruges til at implementere funktionelle interfaces uden at oprette en separat klasse.
+Det gør koden mere læsbar og reducerer boilerplate-kode.
+
+Eksempel: Før lambda:
+
+Runnable r = new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("Hej verden!");
+    }
+};
+
+Med lambda:
+
+Runnable r = () -> System.out.println("Hej verden!");
+2. Diskutér forskelle og ligheder mellem funktionel programmering og objektorienteret programmering i Java.
+
+Forskelle:
+
+Funktionel programmering fokuserer på operationer på data, mens objektorienteret programmering fokuserer på objekter og deres tilstand.
+Lambda-udtryk og streams er kerneelementer i funktionel programmering, mens klasser, arv og polymorfi er centrale i objektorienteret programmering.
+Ligheder:
+
+Begge paradigmer kan sameksistere i Java.
+Java understøtter brugen af både klasser og lambda-udtryk for at skabe fleksible og effektive løsninger.

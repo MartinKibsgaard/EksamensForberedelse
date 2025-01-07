@@ -1,0 +1,93 @@
+1. Hvilke fordele tilbyder Java's Collection Framework sammenlignet med primitive arrays?
+Java's Collection Framework tilbyder mange fordele i forhold til primitive arrays, herunder:
+
+Feature	                            Collection Framework	                                                                                    Primitive Arrays
+Dynamisk størrelse	             :  Collection-klasser som ArrayList vokser automatisk, når der tilføjes elementer.	                            Arrays har en fast størrelse, der ikke kan ændres efter oprettelse.
+Indbyggede funktioner	         :  Collection Framework tilbyder metoder til sortering, søgning, filtrering, mv.	                            Ingen indbyggede metoder til avanceret manipulation.
+Forskellige datastrukturer	     :  Giver adgang til mange datastrukturer som List, Set, Map, og Queue.	                                        Kun en flad struktur uden specifik organisering.
+Generics-støtte	                 :  Støtter generics, så du kan arbejde med typer som ArrayList<String> uden behov for type-casting.	        Arrays er ikke generiske og kræver manuel type-checking.
+Understøttelse af null-værdier	 :  Collections som ArrayList tillader null som værdi (med undtagelse af visse som HashSet).	                Arrays kan ikke rumme null uden at blive eksplicit sat.
+Bedre performance og skalerbarhed:	Collections som HashMap og HashSet tilbyder hurtigere opslag sammenlignet med arrays i mange scenarier.	    Arrays kræver lineær søgning for at finde elementer.
+
+
+Eksempel: Hvis du vil have en liste, der vokser dynamisk, mens brugeren tilføjer data,
+er ArrayList langt mere praktisk end et primitivt array, som kræver genallokering og manuel kopiering.
+
+
+6. Teoretiske Spørgsmål:
+1. Hvilke fordele tilbyder Java's Collection Framework sammenlignet med primitive arrays?
+Java's Collection Framework tilbyder mange fordele i forhold til primitive arrays, herunder:
+
+Feature	Collection Framework	Primitive Arrays
+Dynamisk størrelse	Collection-klasser som ArrayList vokser automatisk, når der tilføjes elementer.	Arrays har en fast størrelse, der ikke kan ændres efter oprettelse.
+Indbyggede funktioner	Collection Framework tilbyder metoder til sortering, søgning, filtrering, mv.	Ingen indbyggede metoder til avanceret manipulation.
+Forskellige datastrukturer	Giver adgang til mange datastrukturer som List, Set, Map, og Queue.	Kun en flad struktur uden specifik organisering.
+Generics-støtte	Støtter generics, så du kan arbejde med typer som ArrayList<String> uden behov for type-casting.	Arrays er ikke generiske og kræver manuel type-checking.
+Understøttelse af null-værdier	Collections som ArrayList tillader null som værdi (med undtagelse af visse som HashSet).	Arrays kan ikke rumme null uden at blive eksplicit sat.
+Bedre performance og skalerbarhed	Collections som HashMap og HashSet tilbyder hurtigere opslag sammenlignet med arrays i mange scenarier.	Arrays kræver lineær søgning for at finde elementer.
+Eksempel: Hvis du vil have en liste, der vokser dynamisk, mens brugeren tilføjer data, er ArrayList langt mere praktisk end et primitivt array, som kræver genallokering og manuel kopiering.
+
+2. Forklar, hvordan Comparator kan bruges til at implementere brugerdefineret sortering.
+En Comparator er en funktionel grænseflade i Java, der bruges til at definere en brugerdefineret sorteringslogik.
+Den tilbyder metoden compare(T o1, T o2), som sammenligner to objekter og bestemmer deres rækkefølge.
+
+Hvordan virker Comparator?
+
+En Comparator-implementering bruges sammen med Collections.sort()
+eller stream().sorted() for at sortere en samling.
+Comparator giver mulighed for at specificere sorteringskriterier
+uden at ændre objekternes naturlige sorteringsrækkefølge (defineret af Comparable).
+
+Eksempel: Brugerdefineret sortering med Comparator
+
+Lad os sige, vi vil sortere en liste af bøger baseret på titelens længde i stedet for alfabetisk rækkefølge:
+
+
+import java.util.*;
+
+class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return "Titel: " + title + ", Forfatter: " + author;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        List<Book> books = new ArrayList<>();
+        books.add(new Book("Harry Potter", "J.K. Rowling"));
+        books.add(new Book("Ringenes Herre", "J.R.R. Tolkien"));
+        books.add(new Book("Sult", "Knut Hamsun"));
+
+        // Brugerdefineret Comparator for at sortere efter titelens længde
+        Comparator<Book> titleLengthComparator = (b1, b2) ->
+                Integer.compare(b1.getTitle().length(), b2.getTitle().length());
+
+        // Sortér listen ved hjælp af Comparator
+        Collections.sort(books, titleLengthComparator);
+
+        // Udskriv sorteret liste
+        books.forEach(System.out::println);
+    }
+}
+Output:
+
+Titel: Sult, Forfatter: Knut Hamsun
+Titel: Harry Potter, Forfatter: J.K. Rowling
+Titel: Ringenes Herre, Forfatter: J.R.R. Tolkien
+Fordele ved Comparator:
+Fleksibilitet: Du kan definere flere Comparatorer til samme klasse uden at ændre klassens kildekode.
+Løs kobling: Sorteringslogikken er separat fra selve objektet, hvilket gør det lettere at ændre eller genbruge.
+Lambda-support: Med Java 8 og senere kan Comparator implementeres nemt ved brug af lambda-udtryk.

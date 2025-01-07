@@ -1,0 +1,11 @@
+Associering, aggregering og komposition forklaret:
+Associering:
+
+Bruges i relationen mellem LibraryMember og Loan.
+En låner er associeret med flere lån gennem en liste.
+Aggregering:
+
+Biblioteket (Library) indeholder en samling af bøger. Bøgerne kan eksistere uafhængigt af biblioteket.
+Komposition:
+
+Loan-objekterne er tæt knyttet til LibraryMember. Når en låner slettes, slettes også deres lån.

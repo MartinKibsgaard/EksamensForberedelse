@@ -1,0 +1,36 @@
+Introduktion til Rekursion i Java
+Rekursion er en teknik, hvor en metode kalder sig selv for at løse et problem. Dette bruges ofte,
+når problemet kan opdeles i mindre delproblemer af samme type. Rekursion kan være meget kraftfuldt,
+især til opgaver som træsøgning, algoritmer som Fibonacci-sekvensen og problemløsning i mapper og filer.
+
+Hvorfor er rekursion vigtigt?
+Rekursion tillader en elegant løsning på problemer, der naturligt har en hierarkisk struktur, som filer i en mappe.
+I stedet for at skrive komplekse loops, kan vi lade metoden "arbejde sig selv ned" i strukturen
+og derefter "arbejde sig selv op" med løsningen.
+
+Forklaring: Implementering af rekursion
+For at beregne størrelsen af en mappe og dens undermapper bruger vi rekursion,
+da problemet har en naturlig hierarkisk struktur. Vi kan tænke på det som følger:
+
+Hvis vi står i en mappe:
+Gennemgå alle filer og læg deres størrelse sammen.
+Hvis der er undermapper, kald metoden igen på hver undermappe for at finde deres størrelse.
+Dette kræver:
+
+En base case: Hvis vi når en fil (ikke en mappe), stopper vi.
+En rekursiv case: Hvis vi står i en mappe, gennemgår vi dens indhold.
+
+1. Forklar princippet bag rekursion, og giv et eksempel på, hvordan det bruges til at løse problemer.
+
+Rekursion er en teknik, hvor en metode kalder sig selv for at nedbryde et problem i mindre dele.
+For eksempel i denne opgave kalder metoden calculateDirectorySize sig selv på hver undermappe
+for at beregne den samlede størrelse.
+
+2. Diskuter fordele og ulemper ved at bruge rekursion frem for iteration i Java.
+
+Fordele:
+Elegant og læsbar løsning til komplekse hierarkiske problemer.
+Kræver ofte mindre kode sammenlignet med iteration.
+Ulemper:
+Kan forårsage stack overflow, hvis rekursionsdybden er for stor.
+Rekursion kan være langsommere end iteration, da hver rekursiv metodeopkald kræver ressourcer.

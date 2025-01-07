@@ -1,0 +1,7 @@
+1. Introduktion
+Observer Pattern bruges til at holde flere objekter synkroniserede med ændringer i ét objekt.
+Det er som en "notifikationsservice", hvor en central enhed informerer tilknyttede enheder,
+når der sker ændringer.
+
+I dette eksempel laver vi en WeatherStation som "Subject", og flere "Observers" som visningsenheder.
+Når vejrudsigten opdateres, vil alle observere automatisk modtage besked og opdatere deres egne data.

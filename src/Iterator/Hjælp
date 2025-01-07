@@ -1,0 +1,12 @@
+Hvad er en Iterator?
+En iterator er et mønster i Java, der gør det muligt at gennemgå elementerne i en samling
+(som en liste eller et sæt) ét ad gangen.
+Den bruges ofte som en måde at skjule samlingens interne struktur på, så klientkoden ikke skal vide,
+hvordan dataene gemmes. I stedet kan man bruge en standardiseret metode til at gennemgå elementerne.
+
+En iterator har typisk tre primære funktioner:
+hasNext(): Tjekker, om der er flere elementer tilbage i samlingen.
+next(): Henter det næste element i samlingen.
+remove(): Fjerner det nuværende element (valgfrit).
+Vi bruger iteratorer, når vi ønsker at adskille traversal-logik fra implementeringen af selve datastrukturen.
+

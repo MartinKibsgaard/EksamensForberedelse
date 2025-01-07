@@ -1,0 +1,28 @@
+Hvad er en Exception? En exception er en uventet situation eller fejl, der opstår under programkørsel. Det kan fx være:
+
+Forsøg på at dividere med nul.
+Læsning af en fil, der ikke findes.
+Forkert brugerinput, fx hvis en tekst indtastes, hvor der forventes et tal.
+Java bruger exceptions til at håndtere sådanne fejl og undgå, at programmet crasher.
+
+Exceptions gør det muligt for os at:
+
+Fange fejl ved hjælp af try-catch-blokke.
+Gøre programmet mere robust ved at håndtere fejl på en kontrolleret måde.
+Videregive meningsfulde fejlmeddelelser til brugeren.
+
+Hvorfor er Exceptions vigtige?
+
+De forbedrer programmets stabilitet og brugervenlighed.
+De hjælper udviklere med at lokalisere og diagnosticere fejl.
+De skaber en struktur til fejlhåndtering, så programmet ikke stopper uventet.
+
+Forklar, hvad en exception er i Java, og hvornår det er hensigtsmæssigt at bruge dem.
+
+En exception er en fejl eller uventet situation, der opstår under programkørsel. Java bruger exceptions til at håndtere sådanne fejl på en kontrolleret måde.
+Det er hensigtsmæssigt at bruge exceptions, når fejl kan forudsiges (fx ugyldigt input eller fil, der ikke findes) og kræver specifik handling for at sikre programmets stabilitet.
+Hvilke fordele er der ved at definere en custom exception, som fx OutOfStockException?
+
+Custom exceptions gør det nemmere at skelne mellem forskellige fejltyper.
+De kan inkludere specifik information om fejlen (fx antal billetter på lager).
+De forbedrer læsbarhed og vedligeholdelse, fordi de beskriver fejlen på en præcis og domænespecifik måde.

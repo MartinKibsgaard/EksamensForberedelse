@@ -1,0 +1,23 @@
+Introduktion til emnet: Arkitektur og Serializable
+Serializable er et interface i Java, der gør det muligt at konvertere objekter til en strøm af bytes
+og gemme dem i en fil, sende dem over et netværk, eller gendanne dem senere. Dette er særligt nyttigt,
+når vi arbejder med data, der skal gemmes permanent eller deles mellem forskellige systemer.
+
+Softwarearkitektur handler om, hvordan vi strukturerer vores kode for at gøre den fleksibel,
+vedligeholdelsesvenlig og let at udvide. Et centralt princip her er Separation of Concerns (SoC),
+hvor vi opdeler koden i mindre komponenter med klart definerede ansvarsområder.
+
+For at forstå disse koncepter, vil vi implementere en opgave med et bibliotekssystem,
+hvor vi bruger Serializable til at gemme og gendanne data.
+
+
+Hvordan fungerer Java's Serializable interface?
+
+Serializable gør det muligt at konvertere et objekt til en strøm af bytes og omvendt.
+Dette muliggør lagring og overførsel af objekter. serialVersionUID bruges til at identificere klassen på tværs af serialisering.
+Hvis klassen ændres, og ID'et ikke matcher, kan der opstå fejl.
+Hvad er fordelene ved adskillelse af ansvar i softwarearkitektur?
+
+SoC gør koden lettere at læse, teste og vedligeholde. Det adskiller logik i moduler,
+så ændringer i ét modul ikke påvirker andre. For eksempel i denne opgave håndterer Library interaktionen med brugeren,
+mens Book kun repræsenterer data.

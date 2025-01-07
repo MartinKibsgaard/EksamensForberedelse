@@ -1,0 +1,45 @@
+Introduktion til Stak og Kø
+En stak og en kø er fundamentale datastrukturer, der bruges i programmering til at organisere data og styre rækkefølgen,
+hvori elementer tilgås og behandles.
+
+Stak (Stack): Følger princippet LIFO (Last In, First Out), hvilket betyder, at det sidste element, der tilføjes,
+er det første, der fjernes. Eksempel: En bunke tallerkener, hvor du altid tager den øverste tallerken først.
+
+Kø (Queue): Følger princippet FIFO (First In, First Out), hvilket betyder, at det første element, der tilføjes,
+er det første, der fjernes. Eksempel: En kø i et supermarked, hvor de første kunder betjenes først.
+
+Disse datastrukturer er essentielle i mange programmeringsscenarier
+som f.eks. processtyring, algoritmeudførelse og eventhåndtering.
+
+
+
+Forklaring: Stak
+En stak er en datastruktur, der følger princippet LIFO (Last In, First Out).
+Det betyder, at det element, der sidst er blevet tilføjet til stakken, også er det første, der bliver fjernet.
+Du kan sammenligne det med en stak tallerkener: den tallerken, du sidst lægger på stakken, er den første, du tager af.
+
+Anvendelser:
+Baglæns navigation: Browserhistorik fungerer som en stak, hvor du kan gå tilbage til tidligere besøgte sider.
+Kalderammer: Når metoder kalder hinanden i programmer, gemmer systemet kalderammer på en stak.
+Tilbagefør handlinger: Programmer som tekstbehandlere bruger stakke til at håndtere "Fortryd"-funktioner.
+
+Forklaring: Kø
+En kø er en datastruktur, der følger princippet FIFO (First In, First Out).
+Det betyder, at det element, der først er blevet tilføjet til køen, også er det første, der bliver fjernet.
+Du kan tænke på det som en kø i et supermarked: de kunder, der først står i køen, bliver først ekspederet.
+
+Anvendelser:
+Printkøer: Når dokumenter sendes til en printer, står de i kø og behandles ét ad gangen.
+Processtyring: Operativsystemer bruger køer til at administrere processer, der venter på udførelse.
+Dataoverførsel: I netværk bruges køer til at håndtere pakker, der sendes og modtages.
+
+
+
+Forklaring: Stak vs. Kø
+Stak og kø er to forskellige datastrukturer, der bruges til at organisere og administrere data.
+Stakken følger princippet LIFO (Last In, First Out), mens køen følger princippet FIFO (First In, First Out).
+Stakken bruges, når du har brug for at tilføje og fjerne elementer i omvendt rækkefølge,
+mens køen bruges, når du har brug for at bevare den oprindelige rækkefølge.
+Stakken bruges ofte til rekursive opkald, baglæns navigation og tilbagefør handlinger,
+mens køen bruges til dataoverførsel, processtyring og printkøer.
+Begge datastrukturer har deres egne anvendelser og fordele, afhængigt af den specifikke opgave, du skal løse.

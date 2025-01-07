@@ -1,0 +1,24 @@
+Introduktion til Generics i Java
+Java Generics er en funktionalitet, der blev introduceret i Java 5 for at forbedre type-sikkerhed
+og genbrugelighed af kode. Generics gør det muligt at definere klasser, interfaces og metoder,
+der arbejder med typer på en generisk måde, uden at specificere den præcise datatype på forhånd.
+
+Hvorfor bruge Generics?
+Type-sikkerhed: Generics sikrer, at der kun kan tilføjes objekter af en bestemt type til en datastruktur, hvilket reducerer runtime-fejl.
+Genbrugelighed: Med Generics kan du skrive en enkelt klasse eller metode, der kan arbejde med enhver datatype.
+Undgåelse af Typecasting: Du behøver ikke typecaste objekter, når du bruger Generics, da typen er kendt ved compile-time.
+Praktisk eksempel: Lagerstyring med Generics
+Vi laver en generisk klasse ItemContainer<T>, der kan håndtere forskellige typer varer. Formålet er at demonstrere:
+
+Hvordan Generics bruges til at skabe fleksible og type-sikre datastrukturer.
+Hvordan vi bruger generiske metoder og grænseflader som Predicate<T> til filtrering.
+
+Forklar, hvordan Java Generics forbedrer type-sikkerhed og fleksibilitet i programmering.
+
+Java Generics sikrer, at kun den specificerede datatype kan bruges i en datastruktur.
+Dette forhindrer runtime-fejl og reducerer behovet for typecasting,
+hvilket gør koden både mere sikker og lettere at vedligeholde.
+Diskutér fordelene ved at bruge grænseflader som Predicate<T> til filtrering af elementer.
+
+Predicate<T> gør det nemt at definere kriterier for filtrering på en fleksibel og genanvendelig måde.
+Det gør koden mere modulær og understøtter brugen af lambda-udtryk, hvilket reducerer kompleksiteten.

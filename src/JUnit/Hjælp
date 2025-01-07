@@ -1,0 +1,33 @@
+Introduktion til JUnit
+JUnit er et framework i Java, der bruges til at skrive og køre automatiserede tests.
+Automatiserede tests er programmerede checks, der sikrer, at vores kode fungerer som forventet.
+Det er især vigtigt, når vi arbejder med større projekter eller programmer, der konstant udvikler sig.
+
+JUnit hjælper med at:
+
+Finde fejl tidligt i udviklingsprocessen.
+Dokumentere, hvordan koden skal opføre sig.
+Gøre det nemt at genkøre tests, hvis vi ændrer koden.
+Med JUnit kan vi teste individuelle metoder (enhedstest) og validere,
+at de lever op til kravene. Dette er kernen i Test-Driven Development (TDD), hvor tests skrives før selve koden.
+
+
+1. Forklar forskellen mellem en integrationstest og en enhedstest, og hvorfor vi bruger JUnit til enhedstestning.
+
+Enhedstest: Tester en enkelt metode eller klasse isoleret fra resten af systemet. Det sikrer,
+at metoden fungerer korrekt i alle situationer. Med JUnit kan vi hurtigt skrive og køre disse tests.
+Integrationstest: Tester, hvordan forskellige dele af systemet arbejder sammen.
+For eksempel hvordan flere klasser samarbejder om at løse en opgave.
+JUnit bruges til enhedstest, fordi det giver værktøjer til nemt at skrive og køre tests og fokusere på små, isolerede enheder af koden.
+
+2. Hvordan kan mocking hjælpe med at teste metoder, der har eksterne afhængigheder?
+
+Når en metode afhænger af eksterne ressourcer som databaser, API'er eller filsystemer,
+kan vi ikke altid teste dem direkte. Ved at bruge mocking (f.eks. med Mockito) kan vi simulere disse afhængigheder.
+Eksempel: Hvis vi har en metode, der læser data fra en database,
+kan vi bruge en mock-objekt til at returnere testdata i stedet for at forbinde til den rigtige database.
+Dette gør testen hurtigere og mere pålidelig.
+Konklusion
+Med JUnit kan vi oprette effektive og pålidelige tests for at sikre kvaliteten af vores Java-kode.
+Denne opgave demonstrerede, hvordan vi kan teste både normale og fejlscenarier for to metoder.
+Husk, at hyppig testning er nøglen til god softwareudvikling!

@@ -1,0 +1,51 @@
+Hvad er Comparable?
+Comparable er et interface, der bruges til at definere en "naturlig rækkefølge" for objekter.
+Når en klasse implementerer Comparable, skal du overskrive metoden compareTo for at definere,
+hvordan et objekt skal sammenlignes med et andet objekt af samme type.
+Bruges typisk, når der kun er én standard måde at sammenligne objekter på.
+Bruges, når du vil sortere objekter i en bestemt rækkefølge, f.eks. alfabetisk, numerisk eller kronologisk.
+
+Hvad er Comparator?
+Comparator er et andet interface, der bruges til at definere en brugerdefineret sorteringsrækkefølge.
+Det giver dig mulighed for at skrive forskellige måder at sammenligne objekter på, uden at ændre selve objektets klasse.
+Bruges, når du vil kunne sammenligne objekter på flere forskellige måder.
+
+Hvorfor bruges de?
+Når vi arbejder med store datasæt eller komplekse objekter,
+har vi brug for effektive værktøjer til at sortere og sammenligne disse data.
+Comparable er praktisk, hvis objekter har en "standard" sorteringslogik, f.eks. sortering af navne alfabetisk.
+Comparator er fleksibelt, da det giver os mulighed for at tilføje flere måder at sortere på,
+f.eks. sortering efter alder, pris eller størrelse.
+
+Hvordan bruges de?
+Comparable bruges ved at lade klassen implementere Comparable interfacet og overskrive compareTo metoden.
+Comparator bruges ved at oprette en ny klasse, der implementerer Comparator interfacet og overskriver compare metoden.
+Når vi har brug for at sortere en liste af objekter, kan vi bruge Collections.sort() metoden og angive,
+hvordan objekterne skal sammenlignes, enten ved at bruge Comparable eller Comparator.
+
+Hvornår bruges de?
+Comparable bruges, når der kun er én standard måde at sortere objekter på.
+Comparator bruges, når der er behov for flere sorteringsmuligheder, eller når vi ikke kan ændre objektklassen.
+
+Hvad er forskellen på dem?
+Comparable bruges til at definere en "naturlig rækkefølge" for objekter,
+mens Comparator bruges til at definere en brugerdefineret sorteringsrækkefølge.
+Comparable kræver, at objektklassen implementerer Comparable interfacet og overskriver compareTo metoden.
+Comparator kræver, at vi opretter en separat klasse, der implementerer Comparator interfacet og overskriver compare metoden.
+Comparable bruges, når der kun er én standard måde at sortere objekter på.
+Comparator bruges, når der er behov for flere sorteringsmuligheder, eller når vi ikke kan ændre objektklassen.
+
+Hvornår bruges de sammen?
+Comparable og Comparator kan bruges sammen, hvis vi har brug for flere sorteringsmuligheder.
+Vi kan f.eks. bruge Comparable til at sortere objekter alfabetisk og Comparator til at sortere objekter numerisk.
+Vi kan også bruge Comparator til at overskrive compareTo metoden i en klasse, der allerede implementerer Comparable.
+Dette giver os mulighed for at tilføje flere sorteringsmuligheder til objekterne.
+
+Hvad er fordele og ulemper ved dem?
+Comparable er enkel og nem at bruge, da det kræver mindre kode og ingen ekstra klasser.
+Ulempen er, at vi ikke kan ændre sorteringsrækkefølgen uden at ændre objektklassen.
+Comparator er mere fleksibel, da det giver os mulighed for at tilføje flere sorteringsmuligheder uden at ændre objektklassen.
+Ulempen er, at det kræver mere kode og ekstra klasser.
+Comparable bruges typisk til at sortere objekter i en "standard" rækkefølge, f.eks. alfabetisk.
+Comparator bruges, når der er behov for flere sorteringsmuligheder, eller når vi ikke kan ændre objektklassen.
+

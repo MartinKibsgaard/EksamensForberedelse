@@ -1,0 +1,10 @@
+Strategy Pattern adskiller algoritmer fra klientkoden, hvilket gør det
+muligt at udskifte strategier dynamisk uden at ændre koden, der bruger strategien.
+Dette mønster er nyttigt i situationer, hvor et system skal kunne tilpasse sig
+forskellige behov, som fx forskellige beregningsmetoder for levering.
+
+Polymorfi via interfaces reducerer kompleksiteten i koden ved at abstrahere de
+forskellige strategier i separate klasser, hvilket gør koden mere udvidelsesvenlig
+og lettere at vedligeholde. Modsat kræver brugen af if-else eller switch-strukturer,
+at alle strategier er samlet i én metode, hvilket kan føre til kompleks og svær
+vedligeholdelse, når nye strategier skal tilføjes.
