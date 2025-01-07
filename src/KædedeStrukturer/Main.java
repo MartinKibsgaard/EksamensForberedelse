@@ -20,23 +20,19 @@ public class Main {
             scanner.nextLine(); // Ryd scannerbufferen
 
             switch (choice) {
-                case 1:
-                    addContact(contactList, history);
-                    break;
-                case 2:
-                    removeContact(contactList, history);
-                    break;
-                case 3:
-                    searchContact(contactList, history);
-                    break;
-                case 4:
-                    printHistory(history);
-                    break;
-                case 5:
+                case 1 -> addContact(contactList, history);
+
+                case 2 -> removeContact(contactList, history);
+
+                case 3 -> searchContact(contactList, history);
+
+                case 4 -> printHistory(history);
+
+                case 5 -> {
                     System.out.println("Farvel!");
                     return;
-                default:
-                    System.out.println("Ugyldigt valg. Prøv igen.");
+                }
+                default -> System.out.println("Ugyldigt valg. Prøv igen.");
             }
         }
     }

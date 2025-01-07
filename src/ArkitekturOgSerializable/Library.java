@@ -24,23 +24,15 @@ public class Library {
             scanner.nextLine(); // Ryd scanner buffer
 
             switch (choice) {
-                case 1:
-                    addBook();
-                    break;
-                case 2:
-                    displayBooks();
-                    break;
-                case 3:
-                    saveBooks();
-                    break;
-                case 4:
-                    loadBooks();
-                    break;
-                case 5:
+                case 1 -> addBook();
+                case 2 -> displayBooks();
+                case 3 -> saveBooks();
+                case 4 -> loadBooks();
+                case 5 -> {
                     System.out.println("Farvel!");
                     return;
-                default:
-                    System.out.println("Ugyldigt valg. Prøv igen.");
+                }
+                default -> System.out.println("Ugyldigt valg. Prøv igen.");
             }
         }
     }

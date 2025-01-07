@@ -7,9 +7,8 @@ public class LibraryManager {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean running = true;
 
-        while (running) {
+        while (true) {
             System.out.println("1. Tilføj en bog");
             System.out.println("2. Slet en bog");
             System.out.println("3. Vis bøger");
@@ -19,25 +18,16 @@ public class LibraryManager {
             scanner.nextLine(); // For at håndtere newline
 
             switch (choice) {
-                case 1:
-                    addBook(scanner);
-                    break;
-                case 2:
-                    removeBook(scanner);
-                    break;
-                case 3:
-                    showBooks();
-                    break;
-                case 4:
-                    running = false;
+                case 1 -> addBook(scanner);
+                case 2 -> removeBook(scanner);
+                case 3 -> showBooks();
+                case 4 -> {
                     System.out.println("Program afsluttes.");
-                    break;
-                default:
-                    System.out.println("Ugyldigt valg, prøv igen.");
+                    return;
+                }
+                default -> System.out.println("Ugyldigt valg, prøv igen.");
             }
         }
-
-        scanner.close();
     }
 
     public static void addBook(Scanner scanner) {

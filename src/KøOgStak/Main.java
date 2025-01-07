@@ -23,37 +23,38 @@ public class Main {
             scanner.nextLine(); // For at fange newline efter input
 
             switch (choice) {
-                case 1:
+                case 1 -> {
                     System.out.print("Indtast kundens navn: ");
                     String customer = scanner.nextLine();
                     customerQueue.add(customer);
                     System.out.println(customer + " er tilføjet til køen.");
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     if (customerQueue.isEmpty()) {
                         System.out.println("Køen er tom.");
                     } else {
                         System.out.println(customerQueue.poll() + " er blevet betjent.");
                     }
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.print("Indtast specialforespørgsel: ");
                     String request = scanner.nextLine();
                     specialRequests.push(request);
                     System.out.println("Specialforespørgslen \"" + request + "\" er tilføjet.");
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     if (specialRequests.isEmpty()) {
                         System.out.println("Der er ingen specialforespørgsler.");
                     } else {
                         System.out.println("Behandler specialforespørgsel: " + specialRequests.pop());
                     }
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("Program afsluttes.");
                     scanner.close();
                     return;
-                default:
+                }
+                default ->
                     System.out.println("Ugyldigt valg. Prøv igen.");
             }
         }

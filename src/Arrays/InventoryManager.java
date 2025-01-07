@@ -22,23 +22,15 @@ public class InventoryManager {
             scanner.nextLine(); // Ryd scannerbufferen
 
             switch (choice) {
-                case 1:
-                    addProducts(scanner);
-                    break;
-                case 2:
-                    displayProducts();
-                    break;
-                case 3:
-                    deleteProduct(scanner);
-                    break;
-                case 4:
-                    updateQuantity(scanner);
-                    break;
-                case 5:
+                case 1 -> addProducts(scanner);
+                case 2 -> displayProducts();
+                case 3 -> deleteProduct(scanner);
+                case 4 -> updateQuantity(scanner);
+                case 5 -> {
                     System.out.println("Program afsluttes.");
                     return;
-                default:
-                    System.out.println("Ugyldigt valg. Prøv igen.");
+                }
+                default -> System.out.println("Ugyldigt valg. Prøv igen.");
             }
         }
     }

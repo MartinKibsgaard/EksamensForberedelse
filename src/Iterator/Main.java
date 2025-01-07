@@ -34,18 +34,17 @@ public class Main {
 
             Iterator<Book> iterator = null;
             switch (choice) {
-                case 1:
-                    iterator = library.getStandardIterator();
-                    break;
-                case 2:
-                    iterator = library.getTitleSortedIterator();
-                    break;
-                case 3:
-                    iterator = library.getYearSortedIterator();
-                    break;
-                default:
+                case 1 -> iterator = library.getStandardIterator();
+                case 2 -> iterator = library.getTitleSortedIterator();
+                case 3 -> iterator = library.getYearSortedIterator();
+                case 4 -> {
+                    System.out.println("Afslutter programmet.");
+                    return;
+                }
+                default -> {
                     System.out.println("Ugyldigt valg, prøv igen.");
                     continue;
+                }
             }
 
             System.out.println("Bøger i biblioteket:");
@@ -53,7 +52,5 @@ public class Main {
                 System.out.println(iterator.next());
             }
         }
-
-        scanner.close();
     }
 }

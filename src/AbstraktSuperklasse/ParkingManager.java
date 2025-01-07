@@ -14,9 +14,8 @@ public class ParkingManager {
 
 
     public static void main(String[] args) {
-        boolean running = true;
 
-        while (running) {
+        while (true) {
             System.out.println("\nParkeringsplads Menu:");
             System.out.println("1. Tilføj bil");
             System.out.println("2. Tilføj motorcykel");
@@ -30,7 +29,10 @@ public class ParkingManager {
                     case 1 -> addVehicle();
                     case 2 -> addMotorcycle();
                     case 3 -> printAllVehicles();
-                    case 4 -> running = false;
+                    case 4 -> {
+                        System.out.println("Programmet afsluttes.");
+                        System.exit(0); // Afslut programmet. Man kan også bruge return; i main metoden. Men System.exit(0) er mere tydelig.
+                    }
                     default -> System.out.println("Ugyldigt valg. Prøv igen.");
                 }
             } catch (NumberFormatException e) {

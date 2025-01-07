@@ -1,0 +1,8 @@
+Iteration betyder at gentage en handling flere gange, og det er en af de vigtigste dele af programmering.
+I Java kan iteration implementeres med løkker som for, while og do-while.
+Disse løkker gør det muligt at gentage kodeblokke, indtil en bestemt betingelse er opfyldt.
+
+For-løkken bruges, når antallet af gentagelser er kendt på forhånd.
+While-løkken bruges, når gentagelser fortsætter, så længe en betingelse er sand.
+Do-while-løkken sikrer, at koden udføres mindst én gang, før betingelsen tjekkes.
+Vi skal implementere en applikation, der hjælper med at håndtere salgsdata for en skobutik ved hjælp af iteration.

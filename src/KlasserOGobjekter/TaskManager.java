@@ -9,9 +9,8 @@ public class TaskManager {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean running = true;
 
-        while (running) {
+        while (true) {
             System.out.println("\nTask Manager Menu:");
             System.out.println("1. Tilføj opgave");
             System.out.println("2. Fjern opgave");
@@ -23,24 +22,20 @@ public class TaskManager {
             scanner.nextLine(); // Ryd scanner-bufferen
 
             switch (choice) {
-                case 1:
-                    addTask(scanner);
-                    break;
-                case 2:
-                    removeTask(scanner);
-                    break;
-                case 3:
-                    displayTasks();
-                    break;
-                case 4:
-                    running = false;
+                case 1 -> addTask(scanner);
+
+                case 2 -> removeTask(scanner);
+
+                case 3 -> displayTasks();
+
+                case 4 -> {
                     System.out.println("Program afsluttet.");
-                    break;
-                default:
-                    System.out.println("Ugyldigt valg. Prøv igen.");
+                    return;
+                }
+
+                default -> System.out.println("Ugyldigt valg. Prøv igen.");
             }
         }
-        scanner.close();
     }
 
     static void addTask(Scanner scanner) {

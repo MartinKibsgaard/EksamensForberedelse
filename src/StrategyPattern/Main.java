@@ -19,21 +19,17 @@ public class Main {
             scanner.nextLine(); // Ryd scannerbufferen
 
             switch (choice) {
-                case 1:
-                    context.setStrategy(new FastestDelivery());
-                    break;
-                case 2:
-                    context.setStrategy(new CheapestDelivery());
-                    break;
-                case 3:
-                    context.setStrategy(new MostEcoDelivery());
-                    break;
-                case 4:
-                    System.out.println("Program afsluttes.");
+                case 1 -> context.setStrategy(new FastestDelivery());
+                case 2 -> context.setStrategy(new CheapestDelivery());
+                case 3 -> context.setStrategy(new MostEcoDelivery());
+                case 4 -> {
+                    System.out.println("Programmet afsluttes.");
                     return;
-                default:
+                }
+                default -> {
                     System.out.println("Ugyldigt valg. Prøv igen.");
                     continue;
+                }
             }
 
             System.out.print("Indtast afstand i km: ");

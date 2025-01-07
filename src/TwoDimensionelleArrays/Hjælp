@@ -1,0 +1,33 @@
+Introduktion til 2-dimensionelle Arrays
+Et 2-dimensionelt array (også kaldet en matrix) er en datastruktur i Java,
+der kan opfattes som en tabel bestående af rækker og kolonner. Det bruges ofte til at repræsentere data,
+der naturligt passer til en tabelform, som f.eks. salgsdata, skakbrætter eller billeder.
+
+I Java kan et 2-dimensionelt array deklareres som en samling af arrays. For eksempel:
+
+int[][] matrix = new int[3][4];
+Her repræsenterer matrix en tabel med 3 rækker og 4 kolonner.
+Elementer kan tilgås via to indeks, f.eks. matrix[1][2], som refererer til elementet i 2. række og 3. kolonne.
+
+Hvad vi skal lave
+Vi skal lave et program til at analysere salgsdata, som er gemt i et 2-dimensionelt array. Vi implementerer følgende funktioner:
+
+Udskriv hele tabellen.
+Beregn det samlede salg for hele ugen.
+Find dagens mest solgte produkt.
+Find ugens mest solgte produkt.
+Implementér inputvalidering.
+
+
+
+Hvordan gemmes 2-dimensionelle arrays i hukommelsen?
+
+Et 2-dimensionelt array i Java er faktisk en array af arrays.
+Hver række er en separat array, hvilket betyder, at rækkerne kan have forskellige længder.
+I hukommelsen gemmes referencer til disse rækker som pointere.
+
+
+Fordele og ulemper ved 2-dimensionelle arrays vs. andre datastrukturer
+
+Fordele: Nem tilgang til data med faste rækker og kolonner; velegnet til tabelformede data.
+Ulemper: Mindre fleksible end lister eller maps; ineffektive til sparsomme datasæt (hvor mange elementer er 0 eller tomme).
