@@ -22,7 +22,7 @@ public class Main {
         Collections.sort(customers, new AgeComparator());
         customers.forEach(System.out::println);
 
-        // Andet eksempe. Sortér efter alder ved hjælp af Comparator
+        // Andet eksempel Sortér efter alder ved hjælp af Comparator
         System.out.println("\nSorteret efter alder (andet eksempel):");
         Collections.sort(customers, Comparator.comparing(Customer::getAge));
         customers.forEach(System.out::println);
