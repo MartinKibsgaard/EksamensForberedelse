@@ -23,7 +23,9 @@ public class SalesAnalysis {
             System.out.println("2. Beregn samlet salg");
             System.out.println("3. Find dagens topsælger");
             System.out.println("4. Find ugens topsælger");
-            System.out.println("5. Afslut");
+            System.out.println("5. Find salg i ydrekanterne");
+            System.out.println("6. Find sal i det indre");
+            System.out.println("7. Afslut");
 
             int choice = scanner.nextInt();
             switch (choice) {
@@ -31,7 +33,9 @@ public class SalesAnalysis {
                 case 2 -> calculateTotalSales(sales);
                 case 3 -> findDayTopSeller(sales, scanner);
                 case 4 -> findWeekTopSeller(sales);
-                case 5 -> {
+                case 5 -> findEdgeSales(sales);
+                case 6 -> findInnerSales(sales);
+                case 7 -> {
                     System.out.println("Program afsluttet.");
                     return;
                 }
@@ -105,5 +109,57 @@ public class SalesAnalysis {
         }
 
         System.out.println("Ugens topsælger: Produkt " + (productIndex + 1) + " med samlet salg på " + maxSale);
+    }
+
+    // Finder alle salgene i ydrekanterne af 2D-arrayet
+    public static void findEdgeSales(int[][] sales) {
+        int totalEdgeSales = 0;
+
+        // Første og sidste række
+        for (int i = 0; i < sales[0].length; i++) {
+            totalEdgeSales += sales[0][i]; // Første række
+            totalEdgeSales += sales[sales.length - 1][i];// Sidste række
+        }
+
+        // Første og sidste kolonne (undgå dobbeltoptælling af hjørner)
+        for (int i = 1; i < sales.length - 1; i++) {
+            totalEdgeSales += sales[i][0]; // Første kolonne
+            totalEdgeSales += sales[i][sales[i].length - 1]; // Sidste kolonne
+        }
+
+        System.out.println("Samlet salg i ydrekanterne: " + totalEdgeSales);
+
+        // Udskrivning af salg i ydrekanterne
+        System.out.println("Salg i ydrekanterne:");
+        for (int i = 0; i < sales[0].length; i++) { // Første og sidste række
+            System.out.println("Salg på første række, kolonne " + (i + 1) + ": " + sales[0][i]); // Første række
+            System.out.println("Salg på sidste række, kolonne " + (i + 1) + ": " + sales[sales.length - 1][i]); // Sidste række
+        }
+        for (int i = 1; i < sales.length - 1; i++) {
+            System.out.println("Salg på første kolonne, række " + (i + 1) + ": " + sales[i][0]); // Første kolonne
+            System.out.println("Salg på sidste kolonne, række " + (i + 1) + ": " + sales[i][sales[i].length - 1]); // Sidste kolonne
+        }
+        System.out.println("Samlet salg i ydrekanterne: " + totalEdgeSales);
+    }
+
+    public static void findInnerSales(int[][] sales) {
+        int totalInnerSales = 0;
+
+        // Indre rækker og kolonner
+        for (int i = 1; i < sales.length - 1; i++) {
+            for (int j = 1; j < sales[i].length - 1; j++) {
+                totalInnerSales += sales[i][j];
+            }
+        }
+
+        System.out.println("Samlet salg i det indre: " + totalInnerSales);
+
+        // Udskrivning af salg i det indre
+        System.out.println("Salg i det indre:");
+        for (int i = 1; i < sales.length - 1; i++) {
+            for (int j = 1; j < sales[i].length - 1; j++) {
+                System.out.println("Salg på række " + (i + 1) + ", kolonne " + (j + 1) + ": " + sales[i][j]);
+            }
+        }
     }
 }
